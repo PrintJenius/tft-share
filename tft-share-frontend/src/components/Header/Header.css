@@ -1,0 +1,469 @@
+/* JOBDA 스타일 헤더 CSS */
+.header-navbar {
+  background: white;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid #e9ecef;
+  padding: 0;
+}
+
+.header-container {
+  max-width: 1400px;
+  padding: 0 30px;
+}
+
+/* 로고 스타일 */
+.header-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px 0;
+  text-decoration: none;
+}
+
+.logo-text {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #667eea;
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+
+.logo-subtext {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #6c757d;
+  line-height: 1;
+  margin-top: -2px;
+}
+
+/* 네비게이션 탭 */
+.header-nav {
+  margin-left: 40px;
+}
+
+.nav-tab {
+  color: #495057 !important;
+  font-weight: 500;
+  padding: 20px 16px !important;
+  margin: 0 4px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  background: transparent !important;
+  border: none;
+  font-size: 0.95rem;
+}
+
+.nav-tab:hover {
+  color: #667eea !important;
+  background-color: #f8f9fa !important;
+}
+
+.nav-tab.active {
+  color: #667eea !important;
+  background: transparent !important;
+  border-bottom: 2px solid #667eea;
+}
+
+.nav-tab i {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-right: 8px;
+}
+
+/* 사용자 네비게이션 */
+.header-user-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* 사용자 메뉴 컨테이너 */
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* 프로필 링크 스타일 */
+.profile-link {
+  color: #495057 !important;
+  font-weight: 500;
+  padding: 12px 16px !important;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  background: transparent !important;
+  border: none;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.profile-link:hover {
+  color: #667eea !important;
+  background-color: #f8f9fa !important;
+}
+
+.profile-link i {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.nav-icon-link {
+  color: #6c757d !important;
+  padding: 12px !important;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  background: transparent !important;
+}
+
+.nav-icon-link:hover {
+  color: #667eea !important;
+  background-color: #f8f9fa !important;
+}
+
+.nav-icon-link i {
+  font-size: 1rem;
+}
+
+/* 인증 버튼 */
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.login-btn {
+  border: 2px solid #667eea;
+  color: #667eea;
+  background: transparent;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.login-btn:hover {
+  background: #667eea;
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.signup-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.signup-btn:hover {
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  color: white;
+}
+
+/* 로그아웃 버튼 */
+.logout-btn {
+  border: 2px solid #dc3545;
+  color: #dc3545;
+  background: transparent;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  font-size: 0.95rem;
+}
+
+.logout-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.logout-btn:hover {
+  color: white;
+  box-shadow: 0 6px 20px rgba(220, 53, 69, 0.3);
+}
+
+.logout-btn:hover::before {
+  left: 0;
+}
+
+.logout-btn i {
+  transition: transform 0.3s ease;
+}
+
+.logout-btn:hover i {
+
+}
+
+/* 햄버거 메뉴 */
+.header-toggle {
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: transparent !important;
+}
+
+.header-toggle:hover {
+  background-color: #f8f9fa !important;
+}
+
+.header-toggle:focus {
+  box-shadow: none !important;
+  outline: none !important;
+  background-color: transparent !important;
+}
+
+/* 헤더 모든 요소에서 focus 테두리와 배경 변화 제거 */
+.header-navbar *:focus,
+.header-navbar *:active,
+.header-navbar *:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+.nav-tab:focus,
+.nav-tab:active,
+.nav-tab:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+.profile-link:focus,
+.profile-link:active,
+.profile-link:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+.nav-icon-link:focus,
+.nav-icon-link:active,
+.nav-icon-link:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+.login-btn:focus,
+.login-btn:active,
+.login-btn:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+.signup-btn:focus,
+.signup-btn:active,
+.signup-btn:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+.logout-btn:focus,
+.logout-btn:active,
+.logout-btn:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+.header-logo:focus,
+.header-logo:active,
+.header-logo:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+/* 버튼 클릭 시 배경 변화 방지 */
+.btn:active,
+.btn:focus,
+.btn:focus-visible {
+  background-color: inherit !important;
+  transform: none !important;
+}
+
+/* 링크 클릭 시 배경 변화 방지 */
+a:active,
+a:focus,
+a:focus-visible {
+  background-color: transparent !important;
+}
+
+/* 링크 기본 스타일 제거 */
+.header-navbar a,
+.header-navbar a:link,
+.header-navbar a:visited,
+.header-navbar a:hover,
+.header-navbar a:active,
+.header-navbar a:focus {
+  text-decoration: none !important;
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+/* 특정 링크 요소들의 기본 스타일 제거 */
+.nav-tab,
+.profile-link,
+.nav-icon-link,
+.header-logo {
+  text-decoration: none !important;
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+/* Bootstrap 기본 스타일 오버라이드 */
+.nav-link:focus,
+.nav-link:active,
+.nav-link:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:active,
+.navbar-nav .nav-link:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+/* 클릭 시 검은색 배경 완전 제거 */
+.nav-link:active,
+.nav-link:focus,
+.nav-link:focus-visible,
+.nav-link:focus-within {
+  background-color: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* 모든 네비게이션 요소에 대한 강제 스타일 */
+.header-navbar .nav-link,
+.header-navbar .nav-item,
+.header-navbar .navbar-nav .nav-link {
+  background-color: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.header-navbar .nav-link:active,
+.header-navbar .nav-link:focus,
+.header-navbar .nav-link:focus-visible,
+.header-navbar .nav-link:focus-within {
+  background-color: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1200px) {
+  .header-container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .header-nav {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  
+  .nav-tab {
+    padding: 15px 16px !important;
+    margin: 4px 0;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .header-user-nav {
+    margin-top: 20px;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .user-menu {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  
+  .profile-link {
+    justify-content: center;
+    width: 100%;
+    padding: 12px 20px !important;
+  }
+  
+  .auth-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .login-btn,
+  .signup-btn,
+  .logout-btn {
+    width: 100%;
+    margin: 5px 0;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-container {
+    padding: 0 15px;
+  }
+  
+  .logo-text {
+    font-size: 1.3rem;
+  }
+  
+  .logo-subtext {
+    font-size: 0.75rem;
+  }
+  
+  .nav-tab {
+    padding: 12px 16px !important;
+    font-size: 0.85rem;
+  }
+  
+  .profile-link {
+    padding: 10px 16px !important;
+    font-size: 0.85rem;
+  }
+  
+  .signup-btn,
+  .logout-btn {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+}

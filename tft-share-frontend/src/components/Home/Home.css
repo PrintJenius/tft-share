@@ -1,0 +1,405 @@
+/* TFT Share 홈페이지 CSS */
+.home-container {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+/* 메인 콘텐츠 */
+.home-main-content {
+  padding: 30px 20px;
+  max-width: 1200px;
+}
+
+/* 메인 헤더 섹션 */
+.home-main-hero-card {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.home-hero-content {
+  color: white;
+  padding: 60px 40px;
+}
+
+.home-hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+}
+
+.home-hero-subtitle {
+  font-size: 1.3rem;
+  font-weight: 400;
+  opacity: 0.95;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.home-hero-buttons {
+  margin-top: 40px;
+}
+
+.home-hero-buttons .btn {
+  border-radius: 30px;
+  padding: 15px 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #000000;
+}
+
+.home-hero-buttons .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+
+/* 섹션 제목 */
+.home-section-title {
+  color: #2c3e50;
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+/* 홈페이지의 primary 버튼에 대한 스타일 */
+.home-container .btn-primary {
+  background-color: #ffffff !important;
+  border-color: #000000 !important;
+  color: #000000 !important;
+  border-width: .1px !important;
+  border-style: solid !important;
+}
+
+.home-container .btn-primary:hover {
+  background-color: #f8f9fa !important;
+  border-color: #000000 !important;
+  color: #000000 !important;
+}
+
+/* 서비스 이용 방법 섹션 */
+.home-how-to-card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.home-how-to-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.home-how-to-card .card-body {
+  padding: 30px 25px;
+}
+
+.home-step-icon {
+  margin-bottom: 20px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-how-to-card .card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.home-how-to-card .card-text {
+  color: #6c757d;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* 계정 티어 인증 방법 섹션 */
+.home-tier-verification-card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  background: white;
+}
+
+.home-tier-verification-card .card-body {
+  padding: 40px;
+}
+
+.home-verification-steps {
+  margin-bottom: 30px;
+}
+
+.home-verification-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.home-step-number {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.home-step-content h5 {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.home-step-content p {
+  color: #6c757d;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 피드백 받을 타임라인 설정 방법 섹션 */
+.home-timeline-guide-card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  background: white;
+}
+
+.home-timeline-guide-card .card-body {
+  padding: 40px;
+}
+
+.home-timeline-features h5 {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.home-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.home-feature-list li {
+  color: #2c3e50;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.home-timeline-example h5 {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.home-example-timeline {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* 홈페이지의 타임라인 예시 스타일 */
+.home-container .home-example-timeline .home-timeline-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.home-container .home-example-timeline .home-timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.home-container .home-example-timeline .home-timeline-item .home-time {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-right: 15px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.home-container .home-example-timeline .home-timeline-item .home-description {
+  color: #495057;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* 서비스 특징 섹션 */
+.home-feature-card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.home-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.home-feature-card .card-body {
+  padding: 30px 25px;
+}
+
+.home-feature-icon {
+  margin-bottom: 20px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-feature-card .card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.home-feature-card .card-text {
+  color: #6c757d;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+/* 시작하기 CTA 섹션 */
+.home-cta-card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.home-cta-card .card-body {
+  padding: 50px 40px;
+}
+
+.home-cta-card h2 {
+  color: #2c3e50;
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+
+.home-cta-card p {
+  color: #6c757d;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.home-cta-buttons .btn {
+  border-radius: 30px;
+  padding: 15px 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #000000;
+}
+
+.home-cta-buttons .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .home-main-content {
+    padding: 20px 15px;
+  }
+  
+  .home-hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .home-hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .home-hero-content {
+    padding: 40px 25px;
+  }
+  
+  .home-section-title {
+    font-size: 1.8rem;
+  }
+  
+  .home-tier-verification-card .card-body,
+  .home-timeline-guide-card .card-body {
+    padding: 25px;
+  }
+  
+  .home-cta-card .card-body {
+    padding: 30px 25px;
+  }
+  
+  .home-cta-card h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-hero-title {
+    font-size: 2rem;
+  }
+  
+  .home-hero-content {
+    padding: 30px 20px;
+  }
+  
+  .home-hero-buttons .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .home-verification-step {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .home-container .home-example-timeline .home-timeline-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .home-container .home-example-timeline .home-timeline-item .home-time {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}

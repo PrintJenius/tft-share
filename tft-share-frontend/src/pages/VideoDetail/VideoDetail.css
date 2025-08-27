@@ -1,0 +1,481 @@
+/* VideoDetail 페이지 스타일 */
+.video-detail-container {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  padding: 30px 0;
+}
+
+/* 동영상 플레이어 */
+.video-player-card {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+/* 비디오 정보 카드 */
+.video-info-card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  background: white;
+}
+
+.video-title {
+  color: #2c3e50;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 1.3;
+}
+
+.video-description {
+  color: #6c757d;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* 비디오 통계 */
+.video-stats {
+  min-width: 200px;
+}
+
+.video-stat-item {
+  padding: 8px 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.video-stat-value {
+  font-weight: 700;
+  color: #2c3e50;
+  font-size: 1.1rem;
+}
+
+.video-stat-label {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* 좋아요 버튼 */
+.video-like-btn {
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+.video-like-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+}
+
+.video-like-btn .fa-heart {
+  margin-right: 4px;
+}
+
+/* 타임라인 섹션 */
+.video-timeline-section {
+  margin-bottom: 30px;
+}
+
+.video-timeline-section h4 {
+  color: #2c3e50;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.video-timeline-item {
+  background: white;
+  border: 1px solid #e9ecef !important;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  padding: 20px !important;
+}
+
+.video-timeline-item:hover {
+  border-color: #667eea !important;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.1);
+}
+
+.video-timeline-content {
+  color: #495057;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+/* 피드백 관련 스타일 */
+.video-feedback-count {
+  font-size: 0.8rem;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background-color: #6c757d !important;
+  color: white;
+}
+
+.video-feedback-count:hover {
+  background-color: #5a6268 !important;
+}
+
+.video-feedback-button {
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.video-feedback-button:hover {
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+}
+
+/* 피드백 등록 버튼 스타일 - 버튼으로 복원 */
+.video-feedback-add-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border: none !important;
+  color: white !important;
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  padding: 6px 16px !important;
+  border-radius: 20px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+}
+
+.video-feedback-add-btn:hover {
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  transform: translateY(-1px);
+  color: white !important;
+  text-decoration: none !important;
+}
+
+/* 피드백 입력창 스타일 */
+.video-feedback-input-section {
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  margin-top: 15px;
+  padding: 20px !important;
+}
+
+.video-feedback-input-section .form-label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.video-feedback-input-section .form-control {
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.video-feedback-input-section .form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+/* 피드백 등록/취소 버튼 스타일 */
+.video-feedback-input-section .btn {
+  border-radius: 20px !important;
+  padding: 8px 16px !important;
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+.video-feedback-input-section .btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border: none !important;
+  color: white !important;
+}
+
+.video-feedback-input-section .btn-primary:hover {
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.video-feedback-input-section .btn-outline-secondary {
+  border: 2px solid #6c757d !important;
+  color: #6c757d !important;
+  background: transparent !important;
+}
+
+.video-feedback-input-section .btn-outline-secondary:hover {
+  background: #6c757d !important;
+  color: white !important;
+}
+
+/* 피드백 목록 스타일 */
+.video-feedback-list {
+  margin-top: 15px;
+}
+
+.video-feedback-list h6 {
+  color: #6c757d;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.video-feedback-item {
+  background: #f8f9fa !important;
+  border: 1px solid #e9ecef !important;
+  border-radius: 8px !important;
+  margin-bottom: 10px !important;
+  padding: 15px !important;
+}
+
+.video-tier-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(102, 126, 234, 0.1);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  margin-left: 8px;
+}
+
+.video-feedback-item .video-feedback-comment {
+  color: #495057;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-top: 8px;
+}
+
+/* 피드백 수정/삭제 버튼 스타일 */
+.video-feedback-item .btn {
+  border-radius: 15px !important;
+  padding: 6px 12px !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+.video-feedback-item .btn-outline-primary {
+  border: 2px solid #667eea !important;
+  color: #667eea !important;
+  background: transparent !important;
+}
+
+.video-feedback-item .btn-outline-primary:hover {
+  background: #667eea !important;
+  color: white !important;
+}
+
+.video-feedback-item .btn-outline-danger {
+  border: 2px solid #dc3545 !important;
+  color: #dc3545 !important;
+  background: transparent !important;
+}
+
+.video-feedback-item .btn-outline-danger:hover {
+  background: #dc3545 !important;
+  color: white !important;
+}
+
+.video-feedback-item .btn-success {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%) !important;
+  border: none !important;
+  color: white !important;
+}
+
+.video-feedback-item .btn-success:hover {
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+  transform: translateY(-1px);
+}
+
+/* 피드백 모달 */
+.video-feedback-modal .modal-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-bottom: none;
+}
+
+.video-feedback-modal .modal-title {
+  font-weight: 600;
+}
+
+.video-feedback-modal .modal-body {
+  padding: 25px;
+}
+
+.video-feedback-modal .form-label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.video-feedback-modal .form-control {
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.video-feedback-modal .form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.video-feedback-modal .modal-footer {
+  border-top: 1px solid #e9ecef;
+  padding: 20px 25px;
+}
+
+.video-feedback-modal .btn {
+  border-radius: 25px;
+  padding: 10px 24px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.video-feedback-modal .btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+}
+
+.video-feedback-modal .btn-primary:hover {
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.video-feedback-modal .btn-secondary {
+  border: 2px solid #6c757d;
+  color: #6c757d;
+  background: transparent;
+}
+
+.video-feedback-modal .btn-secondary:hover {
+  background: #6c757d;
+  color: white;
+}
+
+/* 댓글 섹션 */
+.video-comments-section {
+  margin-bottom: 30px;
+}
+
+.video-comments-section h4 {
+  color: #2c3e50;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.video-comment-item {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.video-comment-item:hover {
+  border-color: #667eea;
+  box-shadow: 0 2px 10px rgba(102, 126, 234, 0.1);
+}
+
+.video-comment-form {
+  margin-top: 25px;
+}
+
+.video-comment-input {
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.video-comment-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+/* 댓글 등록 버튼 스타일 */
+.video-comment-button {
+  border-radius: 25px !important;
+  padding: 12px 24px !important;
+  font-weight: 500 !important;
+  font-size: 0.95rem !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border: none !important;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+  color: white !important;
+}
+
+.video-comment-button:hover {
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  color: white !important;
+}
+
+/* 시간 표시 스타일 */
+.video-timeline-time {
+  cursor: pointer;
+  font-weight: 600;
+  color: #667eea;
+  transition: all 0.3s ease;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.video-timeline-time:hover {
+  background-color: rgba(102, 126, 234, 0.1);
+  color: #5a67d8;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .video-detail-container {
+    padding: 20px 0;
+  }
+  
+  .video-timeline-item {
+    padding: 15px !important;
+  }
+  
+  .video-feedback-modal .modal-body {
+    padding: 20px;
+  }
+  
+  .video-feedback-modal .modal-footer {
+    padding: 15px 20px;
+  }
+  
+  .video-comment-button {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .video-timeline-item {
+    padding: 12px !important;
+  }
+  
+  .video-timeline-content {
+    font-size: 0.9rem;
+  }
+  
+  .video-feedback-count {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+  
+  .video-feedback-button {
+    font-size: 0.8rem;
+    padding: 4px 12px;
+  }
+}
+
