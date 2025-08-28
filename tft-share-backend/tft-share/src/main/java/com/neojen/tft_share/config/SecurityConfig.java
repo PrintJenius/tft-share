@@ -31,6 +31,10 @@ public class SecurityConfig {
             .cors().and()  // CORS 활성화
             .csrf().disable()
             .authorizeHttpRequests(auth -> auth
+                // 헬스 체크 및 루트 경로 허용 (로드밸런서 헬스 체크용)
+                .requestMatchers("/").permitAll()
+                .requestMatchers("/actuator/health").permitAll()
+                
                 .requestMatchers("/api/oauth2/**").permitAll()
                 .requestMatchers("/api/video/list").permitAll()  // 동영상 목록은 인증 없이 접근 가능
                 .requestMatchers("/api/video/list/paged").permitAll()  // 페이징된 동영상 목록은 인증 없이 접근 가능
