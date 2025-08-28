@@ -7,7 +7,7 @@ import axios from 'axios';
 const clientId = '221594470812-2msddcnuckjr7iklc7j749epek0pbbjr.apps.googleusercontent.com';
 
 // axios 기본 URL 설정 (백엔드 서버) - HTTPS 사용
-axios.defaults.baseURL = 'https://tftshare.com:8080';
+axios.defaults.baseURL = 'https://tftshare.com';
 
 createRoot(document.getElementById('root')).render(
   <GoogleOAuthProvider clientId={clientId}>
