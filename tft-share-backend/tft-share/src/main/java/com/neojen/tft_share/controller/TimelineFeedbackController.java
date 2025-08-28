@@ -11,7 +11,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/timeline-feedback")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:5173", allowCredentials = "true")
+// @CrossOrigin(origins = "http://localhost:5173", allowCredentials = "true")
+@CrossOrigin(origins = "http://tftshare.com", allowCredentials = "true")
 public class TimelineFeedbackController {
 
     private final TimelineFeedbackService feedbackService;

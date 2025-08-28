@@ -123,7 +123,10 @@ public class OAuthController {
         String jwtToken = jwtTokenProvider.createToken(user.getId().toString());
 
         // 프론트엔드 URL로 리다이렉트 (토큰을 쿼리 파라미터로 전달)
-        String frontendUrl = "http://localhost:5173/login-success?token=" + jwtToken;
+        // 개발환경 (주석처리)
+        // String frontendUrl = "http://localhost:5173/oauth2/callback?token=" + jwtToken;
+        // 배포환경
+        String frontendUrl = "https://tftshare.com/oauth2/callback?token=" + jwtToken;
 
         headers.setLocation(URI.create(frontendUrl));
         return new ResponseEntity<>(headers, HttpStatus.FOUND); // 302 Redirect
