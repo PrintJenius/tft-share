@@ -56,7 +56,12 @@ public class SecurityConfig {
         // 개발환경 (주석처리)
         // configuration.setAllowedOrigins(Arrays.asList("http://localhost:5173", "http://localhost:3000"));
         // 배포환경
-        configuration.setAllowedOrigins(Arrays.asList("http://tftshare.com", "https://tftshare.com"));
+        configuration.setAllowedOrigins(Arrays.asList(
+            "http://tftshare.com", 
+            "https://tftshare.com",
+            "http://www.tftshare.com",
+            "https://www.tftshare.com"
+        ));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
         configuration.setAllowedHeaders(Arrays.asList("*"));
         configuration.setExposedHeaders(Arrays.asList("Authorization", "Content-Type"));

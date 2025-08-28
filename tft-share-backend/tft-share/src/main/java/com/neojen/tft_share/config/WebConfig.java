@@ -14,8 +14,12 @@ public class WebConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 .allowedOriginPatterns("*")  // 모든 origin 패턴 허용 (개발용)
-                // .allowedOrigins("http://localhost:5173", 
-                .allowedOrigins("http://tftshare.com", "https://tftshare.com")
+                .allowedOrigins(
+                    "http://tftshare.com", 
+                    "https://tftshare.com",
+                    "http://www.tftshare.com",
+                    "https://www.tftshare.com"
+                )
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH")
                 .allowedHeaders("*")  // 모든 헤더 허용
                 .exposedHeaders("Authorization", "Content-Type")
