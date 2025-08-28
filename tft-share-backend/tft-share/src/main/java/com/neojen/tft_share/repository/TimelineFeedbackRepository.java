@@ -13,6 +13,8 @@ public interface TimelineFeedbackRepository extends JpaRepository<TimelineFeedba
     
     List<TimelineFeedback> findByTimelineId(Long timelineId);
     
+    List<TimelineFeedback> findByTimelineIdOrderByCreatedAtDesc(Long timelineId);
+    
     long countByTimelineId(Long timelineId);
     
     void deleteByTimelineId(Long timelineId);
