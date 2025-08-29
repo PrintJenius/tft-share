@@ -20,38 +20,7 @@ function Footer() {
               </p>
             </div>
           </Col>
-
-          {/* 빠른 링크 */}
-          <Col lg={2} md={6} className="footer-section">
-            <h6 className="footer-title">빠른 링크</h6>
-                         <ul className="footer-links">
-               <li><a href="/videos">동영상 피드백</a></li>
-
-             </ul>
-          </Col>
-
-          {/* 서비스 */}
-          <Col lg={2} md={6} className="footer-section">
-            <h6 className="footer-title">서비스</h6>
-            <ul className="footer-links">
-              <li><a href="/#">TFT 매칭</a></li>
-              <li><a href="/#">성향 검사</a></li>
-              <li><a href="/#">튜토리얼</a></li>
-              <li><a href="/#">커뮤니티</a></li>
-            </ul>
-          </Col>
-
-          {/* 지원 */}
-          <Col lg={2} md={6} className="footer-section">
-            <h6 className="footer-title">지원</h6>
-            <ul className="footer-links">
-              <li><a href="/#">고객센터</a></li>
-              <li><a href="/#">자주 묻는 질문</a></li>
-              <li><a href="/#">문의하기</a></li>
-              <li><a href="/#">피드백</a></li>
-            </ul>
-          </Col>
-
+          
           {/* 연락처 */}
           <Col lg={2} md={6} className="footer-section">
             <h6 className="footer-title">연락처</h6>
@@ -65,16 +34,9 @@ function Footer() {
         <div className="footer-divider"></div>
 
         {/* 저작권 및 정책 */}
-        <Row className="footer-bottom">
-          <Col md={6} className="footer-copyright">
-            <p>&copy; 2025 TFT Share. All rights reserved.</p>
-          </Col>
-          <Col md={6} className="footer-policies">
-            <ul className="policy-links">
-              <li><a href="/#">개인정보처리방침</a></li>
-              <li><a href="/#">이용약관</a></li>
-              <li><a href="/#">쿠키 정책</a></li>
-            </ul>
+        <Row className="footer-bottom justify-content-center">
+          <Col md={6} className="footer-copyright text-center">
+            <p>&copy; 2025 TFT Share. All rights reserved.</p>            
           </Col>
         </Row>
       </Container>
