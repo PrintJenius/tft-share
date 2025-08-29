@@ -11,6 +11,7 @@ import { AuthProvider } from './components/AuthProvider/AuthProvider';
 import VideoUpload from './pages/VideoUpload/VideoUpload';
 import VideoDetail from './pages/VideoDetail/VideoDetail';
 import UserProfile from './pages/UserProfile/UserProfile';
+import ChatBot from './components/ChatBot/ChatBot';
 
 
 function App() {
@@ -33,6 +34,9 @@ function App() {
           </div>
 
           <Footer />
+          
+          {/* 전역 챗봇 - 모든 페이지에서 우측 하단에 표시 */}
+          <ChatBot />
         </div>
       </BrowserRouter>
     </AuthProvider>
