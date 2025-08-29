@@ -115,7 +115,7 @@ const UserProfile = () => {
     
     try {
       const jwtToken = localStorage.getItem('jwtToken');
-      const response = await axios.post('http://localhost:8080/api/users/verify-tier', tierVerification, {
+      const response = await axios.post('/api/users/verify-tier', tierVerification, {
         headers: {
           Authorization: `Bearer ${jwtToken}`,
         },

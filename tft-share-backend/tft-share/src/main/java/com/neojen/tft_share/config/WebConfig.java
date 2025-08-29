@@ -15,29 +15,21 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addMapping("/**")
                 .allowedOriginPatterns("*")  // 모든 origin 패턴 허용 (개발용)
                 .allowedOrigins(
+         "http://localhost:5173",  // 로컬 개발용 Vite 서버
                     "http://tftshare.com", 
-                    "https://tftshare.com",
-                    "http://www.tftshare.com",
-                    "https://www.tftshare.com"
+                    "https://tftshare.com"
                 )
-                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH")
-                .allowedHeaders("*")  // 모든 헤더 허용
-                .exposedHeaders("Authorization", "Content-Type")
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                .allowedHeaders("*")
                 .allowCredentials(true)
-                .maxAge(3600);  // preflight 요청 캐시 시간
+                .maxAge(3600);
     }
 
     @Bean
     public RestTemplate restTemplate() {
-        RestTemplate restTemplate = new RestTemplate();
-        
-        // HTTP 요청 팩토리 설정
         SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
-        factory.setConnectTimeout(10000);  // 10초 연결 타임아웃
-        factory.setReadTimeout(10000);     // 10초 읽기 타임아웃
-        
-        restTemplate.setRequestFactory(factory);
-        
-        return restTemplate;
+        factory.setConnectTimeout(5000);
+        factory.setReadTimeout(5000);
+        return new RestTemplate(factory);
     }
 }
