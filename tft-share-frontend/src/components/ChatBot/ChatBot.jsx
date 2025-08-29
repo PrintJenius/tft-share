@@ -10,7 +10,11 @@ function ChatBot() {
 
   // FAQ 카테고리 및 질문/답변 데이터
   const faqData = {
+<<<<<<< HEAD
     '서비스 소개': [
+=======
+    '프로젝트 소개': [
+>>>>>>> bc7ceb991d9b5cc70ed8d3e06a8f803a0171520c
       {
         question: 'TFT Share는 무엇인가요?',
         answer: 'TFT Share는 TFT 게임 플레이를 공유하고 피드백을 받을 수 있는 플랫폼입니다.'
