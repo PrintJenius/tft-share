@@ -17,7 +17,7 @@ function ChatBot() {
       },
       {
         question: '어떤 기능들이 있나요?',
-        answer: '동영상 업로드, 타임라인 피드백, 사용자 프로필 관리 등의 기능을 제공합니다.'
+        answer: '동영상 업로드, 타임라인 피드백, 티어인증 등의 기능을 제공합니다.'
       }
     ],
     '사용법 가이드': [
@@ -30,10 +30,20 @@ function ChatBot() {
         answer: '동영상의 특정 시간대에 피드백을 요청할 수 있고, 다른 사용자들이 코멘트를 남겨줍니다.'
       }
     ],
+    '자주묻는 질문': [
+      {
+        question: '왜 구글로그인만 지원하나요?',
+        answer: '동영상을 Youtube에 업로드하기 위해서는 구글 계정이 필요합니다.'
+      },
+      {
+        question: '동영상 업로드가 안돼요. 어떻게 해야 하나요?',
+        answer: '로그인한 구글 계정의 채널이 생성되어 있어야 업로드 가능합니다.'
+      }
+    ],
     '기술 정보': [
       {
         question: '어떤 기술로 만들어졌나요?',
-        answer: 'Spring Boot 백엔드와 React 프론트엔드로 구성되어 있습니다.'
+        answer: 'Spring Boot와 React로 구성되어 있습니다.'
       },
       {
         question: '데이터는 어디에 저장되나요?',
@@ -88,7 +98,6 @@ function ChatBot() {
                              <FaComment className="me-2" />
                <span className="fw-bold">TFT Share 도우미</span>
             </div>
-            <Badge bg="success">온라인</Badge>
           </Card.Header>
           
           <Card.Body className="chatbot-body">
