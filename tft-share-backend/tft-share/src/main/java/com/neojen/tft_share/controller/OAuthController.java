@@ -40,6 +40,12 @@ public class OAuthController {
     @Value("${spring.security.oauth2.client.registration.google.redirect-uri}")
     private String redirectUri;
 
+    @Value("${frontend.url}")
+    private String frontendUrl;
+
+    @Value("${frontend.login-success-path}")
+    private String loginSuccessPath;
+
     private final RestTemplate restTemplate = new RestTemplate();
 
     @GetMapping("/auth-url")
@@ -123,12 +129,10 @@ public class OAuthController {
         String jwtToken = jwtTokenProvider.createToken(user.getId().toString());
 
         // 프론트엔드 URL로 리다이렉트 (토큰을 쿼리 파라미터로 전달)
-        // 개발환경 (주석처리)
-        // String frontendUrl = "http://localhost:5173/oauth2/callback?token=" + jwtToken;
-        // 배포환경
-        String frontendUrl = "https://tftshare.com/oauth2/callback?token=" + jwtToken;
-
-        headers.setLocation(URI.create(frontendUrl));
+        // 환경별 설정 사용
+        String redirectUrl = frontendUrl + loginSuccessPath + "?token=" + jwtToken;
+        
+        headers.setLocation(URI.create(redirectUrl));
         return new ResponseEntity<>(headers, HttpStatus.FOUND); // 302 Redirect
     }
 }

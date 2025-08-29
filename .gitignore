@@ -32,6 +32,8 @@ logs/
 .env.local
 .env.production
 .env.development
+.env.dev
+.env.prod
 
 # Node.js (프론트엔드)
 node_modules/
