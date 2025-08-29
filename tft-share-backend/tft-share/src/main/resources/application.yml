@@ -1,0 +1,92 @@
+server:
+  port: 8080
+  # 로컬 개발용
+  address: localhost
+  # 배포용
+  # address: 0.0.0.0
+
+spring:
+  config:
+    import: optional:file:.env[.properties]
+  profiles:
+    active: dev  # 기본값은 개발 환경
+
+  application:
+    name: tft-share
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${GOOGLE_CLIENT_ID}
+            client-secret: ${GOOGLE_CLIENT_SECRET}
+            # 로컬 개발용
+            redirect-uri: http://localhost:8080/api/oauth2/callback
+            # 배포용
+            # redirect-uri: http://tftshare.com:8080/api/oauth2/callback
+            scope:
+              - openid
+              - email
+              - profile
+              - youtube.upload
+        provider:
+          google:
+            authorization-uri: https://accounts.google.com/o/oauth2/v2/auth
+            token-uri: https://oauth2.googleapis.com/token
+            user-info-uri: https://openidconnect.googleapis.com/v1/userinfo
+
+  datasource:
+    # 로컬 개발용 MySQL
+    url: jdbc:mysql://localhost:3306/tft_share?useSSL=false&requireSSL=false&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=utf8&allowMultiQueries=true
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    # 배포용 RDS
+    # url: jdbc:mysql://tft-share-db.cvoms202yzka.ap-northeast-2.rds.amazonaws.com:3306/tft_share_db?useSSL=false&requireSSL=false&serverTimezone=Asia/Seoul
+    # username: ${DB_USERNAME}
+    # password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      # 로컬 개발용 (테이블 재생성)
+      ddl-auto: create-drop
+      # 배포용 (테이블 업데이트)
+      # ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+  servlet:
+    multipart:
+      max-file-size: 2000MB
+      max-request-size: 2000MB
+
+# 공통 설정 (환경에 관계없이 동일한 설정)
+jwt:
+  secret: ${JWT_SECRET}
+
+# 로컬 개발용 (AWS 기능 비활성화)
+# aws:
+#   credentials:
+#     access-key: ${AWS_ACCESS_KEY}
+#     secret-key: ${AWS_SECRET_KEY}
+#   s3:
+#     bucket-name: tft-share-bucket
+#     region: ap-northeast-2
+
+# 배포용 AWS 설정
+aws:
+  credentials:
+    access-key: ${AWS_ACCESS_KEY}
+    secret-key: ${AWS_SECRET_KEY}
+  s3:
+    bucket-name: tft-share-bucket
+    region: ap-northeast-2
+
+riot:
+  api:
+    key: ${RIOT_API_KEY}
+    kr-url: https://kr.api.riotgames.com
+    asia-url: https://asia.api.riotgames.com
