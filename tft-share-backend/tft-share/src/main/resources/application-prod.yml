@@ -11,11 +11,11 @@ spring:
             redirect-uri: http://tftshare.com:8080/api/oauth2/callback
 
   datasource:
-    url: jdbc:mysql://tft-share-db.cvoms202yzka.ap-northeast-2.rds.amazonaws.com:3306/tft_share_db?useSSL=false&requireSSL=false&serverTimezone=Asia/Seoul
+    url: jdbc:mysql://tft-share-db.cvoms202yzka.ap-northeast-2.rds.amazonaws.com:3306/tft_share_db?useSSL=false&requireSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul
 
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
     show-sql: false
 
 aws:
