@@ -93,7 +93,6 @@ public class TimelineFeedbackService {
                 .timelineId(feedback.getTimeline().getId())
                 .userId(user.getId())
                 .userName(user.getName())
-                .userProfileImage(user.getProfileImg())
                 .summonerName(user.getSummonerName())
                 .tier(user.getTier() != null ? user.getTier().name() : "UNRANKED")
                 .build();
