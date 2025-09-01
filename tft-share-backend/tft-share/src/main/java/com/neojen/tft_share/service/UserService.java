@@ -28,7 +28,6 @@ public class UserService {
             // 업데이트가 필요하면 여기서 업데이트
             user.setEmail(email);
             user.setName(name);
-            user.setProfileImg(profileImg);
             user.setGoogleAccessToken(accessToken);
             user.setGoogleRefreshToken(refreshToken);
             return userRepository.save(user);
@@ -38,7 +37,6 @@ public class UserService {
             newUser.setGoogleId(googleId);
             newUser.setEmail(email);
             newUser.setName(name);
-            newUser.setProfileImg(profileImg);
             newUser.setGoogleAccessToken(accessToken);
             newUser.setGoogleRefreshToken(refreshToken);
             return userRepository.save(newUser);
@@ -57,7 +55,6 @@ public class UserService {
                 .googleId(user.getGoogleId())
                 .email(user.getEmail())
                 .name(user.getName())
-                .profileImg(user.getProfileImg())
                 .tier(user.getTier())
                 .summonerName(user.getSummonerName())
                 .summonerVerified(user.getSummonerVerified())
@@ -79,17 +76,6 @@ public class UserService {
         
         User updatedUser = userRepository.save(user);
         return toDto(updatedUser);
-    }
-
-    public ProfileImageResponseDto updateProfileImage(Long userId, String imageUrl) {
-        User user = findEntityById(userId);
-        user.setProfileImg(imageUrl);
-        
-        User updatedUser = userRepository.save(user);
-        return ProfileImageResponseDto.builder()
-                .profileImageUrl(updatedUser.getProfileImg())
-                .message("프로필 이미지가 성공적으로 업데이트되었습니다.")
-                .build();
     }
 
     public UserDto findByGoogleId(String googleId) {

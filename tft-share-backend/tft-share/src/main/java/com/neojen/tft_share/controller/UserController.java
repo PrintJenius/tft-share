@@ -33,26 +33,6 @@ public class UserController {
         return ResponseEntity.ok(updatedUser);
     }
 
-    @PostMapping("/profile-image")
-    public ResponseEntity<ProfileImageResponseDto> uploadProfileImage(@RequestParam("profileImage") MultipartFile file) {
-        Long userId = getCurrentUserId();
-        
-        try {
-            // S3에 이미지 업로드
-            String imageUrl = s3Service.uploadMultipartFile(s3Service.getBucketName(), file);
-            
-            // 사용자 프로필 이미지 URL 업데이트
-            ProfileImageResponseDto response = userService.updateProfileImage(userId, imageUrl);
-            
-            return ResponseEntity.ok(response);
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body(ProfileImageResponseDto.builder()
-                    .profileImageUrl(null)
-                    .message("이미지 업로드 중 오류가 발생했습니다: " + e.getMessage())
-                    .build());
-        }
-    }
-
     @GetMapping("/me")
     public ResponseEntity<UserDto> getCurrentUser() {
         Long userId = getCurrentUserId();

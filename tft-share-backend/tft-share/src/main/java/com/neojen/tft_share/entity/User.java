@@ -36,9 +36,6 @@ public class User {
 
     @Column(nullable = false, length = 100)
     private String name;
-
-    @Column(name = "profile_img", length = 512)
-    private String profileImg;
     
     @Column(name = "google_access_token")
     private String googleAccessToken;
