@@ -1,9 +1,5 @@
 server:
   port: 8080
-  # 로컬 개발용
-  address: localhost
-  # 배포용
-  # address: 0.0.0.0
 
 spring:
   profiles:
@@ -44,6 +40,8 @@ spring:
     multipart:
       max-file-size: 2000MB
       max-request-size: 2000MB
+      # 리눅스 서버용 임시 디렉토리 설정
+      location: ${java.io.tmpdir}
 
 # 공통 설정 (환경에 관계없이 동일한 설정)
 jwt:

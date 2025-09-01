@@ -1,6 +1,6 @@
 server:
   port: 8080
-  address: localhost
+  address: localhost  # 개발 환경에서는 localhost만 허용
 
 spring:
   security:
@@ -30,4 +30,11 @@ aws:
 frontend:
   url: http://localhost:5173
   login-success-path: /login-success
+
+# 개발 환경 로깅 설정
+logging:
+  level:
+    com.neojen.tft_share: DEBUG
+    org.springframework.security: DEBUG
+    org.hibernate.SQL: DEBUG
 

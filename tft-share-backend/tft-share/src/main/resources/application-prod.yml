@@ -1,6 +1,6 @@
 server:
   port: 8080
-  address: 0.0.0.0
+  address: 0.0.0.0  # 모든 인터페이스에서 접근 허용
 
 spring:
   security:
@@ -11,13 +11,21 @@ spring:
             redirect-uri: http://tftshare.com:8080/api/oauth2/callback
 
   datasource:
-    url: jdbc:mysql://tft-share-db.cvoms202yzka.ap-northeast-2.rds.amazonaws.com:3306/tft_share_db?useSSL=false&requireSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul
+    url: jdbc:mysql://tft-share-db.cvoms202yzka.ap-northeast-2.rds.amazonaws.com:3306/tft_share_db?useSSL=true&requireSSL=true&allowPublicKeyRetrieval=true&serverTimezone=UTC&characterEncoding=utf8&useUnicode=true
 
   jpa:
     hibernate:
       ddl-auto: validate
     show-sql: false
+    # 운영 환경에서 성능 최적화
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 20
+        order_inserts: true
+        order_updates: true
 
+# 운영 환경에서는 AWS 기능 활성화
 aws:
   credentials:
     access-key: ${AWS_ACCESS_KEY}
@@ -30,4 +38,18 @@ aws:
 frontend:
   url: https://tftshare.com
   login-success-path: /oauth2/callback
+
+# 운영 환경 로깅 설정
+logging:
+  level:
+    com.neojen.tft_share: INFO
+    org.springframework.security: WARN
+    org.hibernate.SQL: WARN
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/tft-share.log
+    max-size: 100MB
+    max-history: 30
 
