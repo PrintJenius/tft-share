@@ -335,6 +335,43 @@
   border-color: #f8f9fa;
 }
 
+/* 정책 및 약관 링크 섹션 */
+.home-policy-links-card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  margin-top: 2rem;
+}
+
+.home-policy-links-card .card-body {
+  padding: 40px 30px;
+}
+
+.home-policy-links-card h3 {
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.home-policy-links-card p {
+  color: #6c757d;
+  font-size: 1rem;
+}
+
+.policy-links .btn {
+  border-radius: 25px;
+  padding: 12px 25px;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.policy-links .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
 /* 반응형 디자인 */
 @media (max-width: 768px) {
   .home-main-content {
@@ -368,6 +405,14 @@
   
   .home-cta-card h2 {
     font-size: 1.8rem;
+  }
+  
+  .home-policy-links-card .card-body {
+    padding: 30px 25px;
+  }
+  
+  .home-policy-links-card h3 {
+    font-size: 1.3rem;
   }
 }
 

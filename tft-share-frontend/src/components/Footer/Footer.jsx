@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 function Footer() {
@@ -26,6 +27,18 @@ function Footer() {
             <h6 className="footer-title">연락처</h6>
             <div className="footer-contact">
               <p><i className="fas fa-envelope me-2"></i>uopl178@naver.com</p>
+            </div>
+          </Col>
+          
+          {/* 정책 및 약관 */}
+          <Col lg={2} md={6} className="footer-section">
+            <h6 className="footer-title">정책 및 약관</h6>
+            <div className="footer-links">
+              <p>
+                <Link to="/privacy-policy" className="footer-link">
+                  개인정보 보호정책
+                </Link>
+              </p>
             </div>
           </Col>
         </Row>

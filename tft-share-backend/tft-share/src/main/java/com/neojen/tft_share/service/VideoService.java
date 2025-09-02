@@ -38,6 +38,7 @@ import lombok.RequiredArgsConstructor;
 public class VideoService { 
 
     private final UserService userService;
+    private final GoogleTokenRefreshService tokenRefreshService;
     private final VideoRepository videoRepository;
     private final VideoTimelineRepository timelineRepository;
     private final VideoCommentRepository videoCommentRepository;
@@ -52,14 +53,14 @@ public class VideoService {
     public com.neojen.tft_share.entity.Video uploadVideo(MultipartFile file, String title, String description,
                              String timelineJson, Long userId) throws Exception {
 
-        // 1. 사용자 access_token 조회
+        // 1. 사용자 정보 조회
     	User user = userService.findEntityById(userId);
-        if (user == null || user.getGoogleAccessToken() == null) {
-            throw new IllegalArgumentException("유효한 유저 또는 토큰이 없습니다.");
+        if (user == null) {
+            throw new IllegalArgumentException("유효한 유저가 없습니다.");
         }
         
-        // 2. Access Token 사용
-        String accessToken = user.getGoogleAccessToken();
+        // 2. 유효한 Access Token 가져오기 (만료된 경우 자동 갱신)
+        String accessToken = tokenRefreshService.getValidAccessToken(user);
 
         // 3. YouTube 서비스 객체 생성
         YouTube youtube = new YouTube.Builder(
@@ -68,7 +69,7 @@ public class VideoService {
                 request -> request.getHeaders().setAuthorization("Bearer " + accessToken)
         ).setApplicationName("TFT Share").build();
 
-        // 3. 유튜브 동영상 메타 정보
+        // 4. 유튜브 동영상 메타 정보
         com.google.api.services.youtube.model.Video videoMeta = 
     	    new com.google.api.services.youtube.model.Video();
         VideoSnippet snippet = new VideoSnippet();
@@ -80,7 +81,7 @@ public class VideoService {
         status.setPrivacyStatus("public");
         videoMeta.setStatus(status);
 
-        // 4. 업로드
+        // 5. 업로드
         InputStreamContent mediaContent = new InputStreamContent(
                 file.getContentType(),
                 file.getInputStream()
@@ -103,7 +104,7 @@ public class VideoService {
         
         String thumbnailUrl = "https://img.youtube.com/vi/" + youtubeVideoId + "/hqdefault.jpg";
 
-        // 5. DB에 Video 저장
+        // 6. DB에 Video 저장
         com.neojen.tft_share.entity.Video video = com.neojen.tft_share.entity.Video.builder()
                 .title(title)
                 .description(description)
@@ -113,7 +114,7 @@ public class VideoService {
                 .build();
         videoRepository.save(video);
 
-        // 6. 타임라인 JSON 파싱 후 DB 저장
+        // 7. 타임라인 JSON 파싱 후 DB 저장
         ObjectMapper objectMapper = new ObjectMapper();
         List<Map<String, Object>> timelineList = objectMapper.readValue(timelineJson, List.class);
         for (Map<String, Object> item : timelineList) {

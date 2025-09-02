@@ -11,6 +11,7 @@ import { AuthProvider } from './components/AuthProvider/AuthProvider';
 import VideoUpload from './pages/VideoUpload/VideoUpload';
 import VideoDetail from './pages/VideoDetail/VideoDetail';
 import UserProfile from './pages/UserProfile/UserProfile';
+import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
 import ChatBot from './components/ChatBot/ChatBot';
 
 
@@ -29,6 +30,7 @@ function App() {
               <Route path="/login-success" element={<LoginSuccess />} />
               <Route path="/upload" element={<VideoUpload />} />
               <Route path="/profile" element={<UserProfile />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
             </Routes>
           </div>

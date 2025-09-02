@@ -140,6 +140,19 @@ function VideoUpload() {
       navigate("/videos");
     } catch (err) {
       console.error(err);
+      
+      // Google 인증 만료 오류 처리
+      if (err.response && err.response.data && 
+          err.response.data.includes("Google 인증이 만료되었습니다")) {
+        alert("Google 인증이 만료되었습니다. 다시 로그인해주세요.");
+        // 로그아웃 처리
+        localStorage.removeItem('jwtToken');
+        localStorage.removeItem('user');
+        // 로그인 페이지로 이동
+        window.location.href = '/';
+        return;
+      }
+      
       alert("업로드 중 오류가 발생했습니다.");
     } finally {
       setLoading(false);

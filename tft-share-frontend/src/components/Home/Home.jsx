@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { FaGoogle, FaUpload, FaSearch, FaLink, FaClock, FaUsers, FaStar } from 'react-icons/fa';
 import axios from 'axios';
 import './Home.css';
@@ -246,6 +246,26 @@ const Home = () => {
             </Card.Body>
           </Card>
         )}
+
+        {/* 정책 및 약관 링크 섹션 */}
+        <Card className="home-policy-links-card">
+          <Card.Body className="text-center">
+            <h3 className="mb-3">정책 및 약관</h3>
+            <p className="text-muted mb-3">
+              서비스 이용과 관련된 중요한 정보를 확인하세요.
+            </p>
+            <div className="policy-links">
+              <Button 
+                variant="outline-secondary" 
+                as={Link} 
+                to="/privacy-policy"
+                className="me-3"
+              >
+                개인정보 보호정책
+              </Button>
+            </div>
+          </Card.Body>
+        </Card>
       </Container>
     </div>
   );
