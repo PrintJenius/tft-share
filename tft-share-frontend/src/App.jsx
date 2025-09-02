@@ -12,6 +12,7 @@ import VideoUpload from './pages/VideoUpload/VideoUpload';
 import VideoDetail from './pages/VideoDetail/VideoDetail';
 import UserProfile from './pages/UserProfile/UserProfile';
 import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService/TermsOfService';
 import ChatBot from './components/ChatBot/ChatBot';
 
 
@@ -31,6 +32,7 @@ function App() {
               <Route path="/upload" element={<VideoUpload />} />
               <Route path="/profile" element={<UserProfile />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/terms-of-service" element={<TermsOfService />} />
 
             </Routes>
           </div>

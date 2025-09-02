@@ -39,6 +39,11 @@ function Footer() {
                   개인정보 보호정책
                 </Link>
               </p>
+              <p>
+                <Link to="/terms-of-service" className="footer-link">
+                  서비스 이용약관
+                </Link>
+              </p>
             </div>
           </Col>
         </Row>

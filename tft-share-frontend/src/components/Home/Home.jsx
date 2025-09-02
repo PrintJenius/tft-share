@@ -263,6 +263,13 @@ const Home = () => {
               >
                 개인정보 보호정책
               </Button>
+              <Button 
+                variant="outline-secondary" 
+                as={Link} 
+                to="/terms-of-service"
+              >
+                서비스 이용약관
+              </Button>
             </div>
           </Card.Body>
         </Card>
