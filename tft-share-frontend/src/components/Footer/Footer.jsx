@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import './Footer.css';
 
 function Footer() {
@@ -35,14 +34,14 @@ function Footer() {
             <h6 className="footer-title">정책 및 약관</h6>
             <div className="footer-links">
               <p>
-                <Link to="/privacy-policy" className="footer-link">
+                <a href="/privacy-policy.html" className="footer-link" target="_blank">
                   개인정보 보호정책
-                </Link>
+                </a>
               </p>
               <p>
-                <Link to="/terms-of-service" className="footer-link">
+                <a href="/terms-of-service.html" className="footer-link" target="_blank">
                   서비스 이용약관
-                </Link>
+                </a>
               </p>
             </div>
           </Col>

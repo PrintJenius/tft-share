@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { FaGoogle, FaUpload, FaSearch, FaLink, FaClock, FaUsers, FaStar } from 'react-icons/fa';
 import axios from 'axios';
 import './Home.css';
@@ -257,16 +257,16 @@ const Home = () => {
             <div className="policy-links">
               <Button 
                 variant="outline-secondary" 
-                as={Link} 
-                to="/privacy-policy"
+                href="/privacy-policy.html"
+                target="_blank"
                 className="me-3"
               >
                 개인정보 보호정책
               </Button>
               <Button 
                 variant="outline-secondary" 
-                as={Link} 
-                to="/terms-of-service"
+                href="/terms-of-service.html"
+                target="_blank"
               >
                 서비스 이용약관
               </Button>
