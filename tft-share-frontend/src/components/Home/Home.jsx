@@ -261,7 +261,7 @@ const Home = () => {
                 target="_blank"
                 className="me-3"
               >
-                개인정보 보호정책
+                개인정보처리방침
               </Button>
               <Button 
                 variant="outline-secondary" 

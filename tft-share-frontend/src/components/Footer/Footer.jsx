@@ -35,7 +35,7 @@ function Footer() {
             <div className="footer-links">
               <p>
                 <a href="/privacy-policy.html" className="footer-link" target="_blank">
-                  개인정보 보호정책
+                  개인정보처리방침
                 </a>
               </p>
               <p>
