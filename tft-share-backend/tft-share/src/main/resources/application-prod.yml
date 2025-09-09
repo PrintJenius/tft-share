@@ -2,6 +2,7 @@ server:
   port: 8080
   address: 0.0.0.0  # 모든 인터페이스에서 접근 허용
   forward-headers-strategy: framework  # ALB 프록시 헤더 인식
+  use-forward-headers: true  # 프록시 헤더 사용 강제
 
 spring:
   security:
@@ -9,7 +10,12 @@ spring:
       client:
         registration:
           google:
+            client-id: 221594470812-2msddcnuckjr7iklc7j749epek0pbbjr.apps.googleusercontent.com
+            client-secret: ${GOOGLE_CLIENT_SECRET}
             redirect-uri: https://tftshare.com/api/oauth2/callback
+            scope: openid,email,profile,https://www.googleapis.com/auth/youtube.upload
+            authorization-grant-type: authorization_code
+            client-authentication-method: client_secret_post
 
   datasource:
     url: jdbc:mysql://tft-share-db.cvoms202yzka.ap-northeast-2.rds.amazonaws.com:3306/tft_share_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&characterEncoding=utf8&useUnicode=true
