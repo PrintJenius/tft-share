@@ -8,7 +8,7 @@ spring:
       client:
         registration:
           google:
-            redirect-uri: https://tftshare.com:8080/api/oauth2/callback
+            redirect-uri: https://tftshare.com/api/oauth2/callback
 
   datasource:
     url: jdbc:mysql://tft-share-db.cvoms202yzka.ap-northeast-2.rds.amazonaws.com:3306/tft_share_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&characterEncoding=utf8&useUnicode=true
