@@ -44,7 +44,7 @@ aws:
 # 운영 환경 프론트엔드 URL
 frontend:
   url: https://tftshare.com
-  login-success-path: /login-success
+  login-success-path: /oauth2/callback
 
 # 운영 환경 로깅 설정
 logging:

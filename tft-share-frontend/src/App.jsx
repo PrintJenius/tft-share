@@ -29,6 +29,7 @@ function App() {
               <Route path="/videos" element={<Videos />} />
               <Route path="/video/:id" element={<VideoDetail />} />
               <Route path="/login-success" element={<LoginSuccess />} />
+              <Route path="/oauth2/callback" element={<LoginSuccess />} />
               <Route path="/upload" element={<VideoUpload />} />
               <Route path="/profile" element={<UserProfile />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
