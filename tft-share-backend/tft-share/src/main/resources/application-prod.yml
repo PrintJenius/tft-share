@@ -1,6 +1,7 @@
 server:
   port: 8080
   address: 0.0.0.0  # 모든 인터페이스에서 접근 허용
+  forward-headers-strategy: framework  # ALB 프록시 헤더 인식
 
 spring:
   security:
