@@ -23,8 +23,8 @@ const getBackendUrl = () => {
   if (isDevelopment) {
     return import.meta.env.VITE_BACKEND_URL || 'http://localhost:8080';
   } else {
-    // 운영 환경에서는 실제 도메인 사용
-    return import.meta.env.VITE_BACKEND_URL || 'https://tftshare.com:8080';
+    // 운영 환경에서는 포트 번호 없이 사용 (443 포트)
+    return import.meta.env.VITE_BACKEND_URL || 'https://tftshare.com';
   }
 };
 

@@ -34,12 +34,12 @@ function Footer() {
             <h6 className="footer-title">정책 및 약관</h6>
             <div className="footer-links">
               <p>
-                <a href="/privacy-policy.html" className="footer-link" target="_blank">
+                <a href="https://tftshare.com/privacy-policy.html" className="footer-link" target="_blank">
                   개인정보처리방침
                 </a>
               </p>
               <p>
-                <a href="/terms-of-service.html" className="footer-link" target="_blank">
+                <a href="https://tftshare.com/terms-of-service.html" className="footer-link" target="_blank">
                   서비스 이용약관
                 </a>
               </p>
